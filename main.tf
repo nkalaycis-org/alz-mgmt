@@ -20,7 +20,7 @@ locals {
 module "management_resources" {
   # <https://registry.terraform.io/modules/Azure/avm-ptn-alz-management/azurerm/latest>
   source  = "Azure/avm-ptn-alz-management/azurerm"
-  version = "0.10.0"
+  version = "0.9.0"
 
   location                     = var.location
   resource_group_name          = local.management_resource_group_name
@@ -49,7 +49,7 @@ module "management_resources" {
 module "management_groups" {
   # <https://registry.terraform.io/modules/Azure/avm-ptn-alz/azurerm/latest>
   source  = "Azure/avm-ptn-alz/azurerm"
-  version = "0.21.0"
+  version = ">= 0.21.0"
 
   architecture_name  = "alz_custom"
   location           = var.location
@@ -58,13 +58,14 @@ module "management_groups" {
   #   retries            = local.default_retries
   #   timeouts           = local.default_timeouts
 
-  dependencies = {
-    policy_assignments = [
-      module.management_resources.data_collection_rule_ids,
-      module.management_resources.resource_id,
-      module.management_resources.user_assigned_identity_ids,
-    ]
-  }
+  # TODO: Validate if dependencies argument is supported in this module version
+  # dependencies = {
+  #   policy_assignments = [
+  #     module.management_resources.data_collection_rule_ids,
+  #     module.management_resources.resource_id,
+  #     module.management_resources.user_assigned_identity_ids,
+  #   ]
+  # }
 
   policy_assignments_to_modify = {
     "slz" = {

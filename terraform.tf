@@ -76,5 +76,14 @@ provider "azapi" {
 }
 
 provider "alz" {
-  library_overwrite_enabled = false
+  library_overwrite_enabled = true
+  library_references = [
+    {
+      path = "platform/slz"
+      ref  = "2026.04.2"
+    },
+    {
+      custom_url = "${path.root}/lib"
+    }
+  ]
 }

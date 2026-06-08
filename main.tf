@@ -51,7 +51,7 @@ module "management_groups" {
   source  = "Azure/avm-ptn-alz/azurerm"
   version = "0.21.0"
 
-  architecture_name  = "alz"
+  architecture_name  = "slz"
   location           = var.location
   parent_resource_id = data.azapi_client_config.current.tenant_id # Tenant root group
 

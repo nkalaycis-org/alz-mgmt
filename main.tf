@@ -49,7 +49,7 @@ module "management_resources" {
 module "management_groups" {
   # <https://registry.terraform.io/modules/Azure/avm-ptn-alz/azurerm/latest>
   source  = "Azure/avm-ptn-alz/azurerm"
-  version = ">= 0.21.0"
+  version = "0.20.2"
 
   architecture_name  = "alz_custom"
   location           = var.location

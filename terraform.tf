@@ -74,3 +74,16 @@ provider "azurerm" {
 provider "azapi" {
   skip_provider_registration = true
 }
+
+provider "alz" {
+  library_overwrite_enabled = true
+  library_references = [
+    {
+      custom_url = "${path.root}/lib"
+    },
+    {
+      path = "platform/slz"
+      ref  = "2026.04.3"
+    }
+  ]
+}

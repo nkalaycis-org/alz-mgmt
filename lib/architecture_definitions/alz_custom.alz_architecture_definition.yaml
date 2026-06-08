@@ -6,3 +6,11 @@
   "id": "alz"
   "parent_id": null
 "name": "alz_custom"
+
+provider "alz" {
+  library_references = [
+    {
+      custom_url = "${path.root}/lib"
+    }
+  ]
+}

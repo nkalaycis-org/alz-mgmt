@@ -1,8 +1,0 @@
-"management_groups":
-- "archetypes":
-  - "root_custom"
-  "display_name": "Azure Landing Zones"
-  "exists": true
-  "id": "alz"
-  "parent_id": null
-"name": "alz_custom"

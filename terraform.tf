@@ -3,7 +3,7 @@ terraform {
   required_providers {
     alz = {
       source  = "Azure/alz"
-      version = "0.20.2"
+      version = "~> 0.21"
     }
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -73,4 +73,14 @@ provider "azurerm" {
 
 provider "azapi" {
   skip_provider_registration = true
+}
+
+provider "alz" {
+  library_overwrite_enabled = true
+  library_references = [
+    {
+      path = "platform/slz"
+      ref  = "2026.04.2"
+    }
+  ]
 }

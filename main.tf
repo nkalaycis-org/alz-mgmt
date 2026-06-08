@@ -20,7 +20,7 @@ locals {
 module "management_resources" {
   # <https://registry.terraform.io/modules/Azure/avm-ptn-alz-management/azurerm/latest>
   source  = "Azure/avm-ptn-alz-management/azurerm"
-  version = "0.9.0"
+  version = "0.10.0"
 
   location                     = var.location
   resource_group_name          = local.management_resource_group_name
@@ -49,7 +49,7 @@ module "management_resources" {
 module "management_groups" {
   # <https://registry.terraform.io/modules/Azure/avm-ptn-alz/azurerm/latest>
   source  = "Azure/avm-ptn-alz/azurerm"
-  version = "0.20.2"
+  version = "0.21.0"
 
   architecture_name  = "alz_custom"
   location           = var.location

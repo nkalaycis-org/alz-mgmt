@@ -58,14 +58,11 @@ module "management_groups" {
   #   retries            = local.default_retries
   #   timeouts           = local.default_timeouts
 
-  # TODO: Validate if dependencies argument is supported in this module version
-  # dependencies = {
-  #   policy_assignments = [
-  #     module.management_resources.data_collection_rule_ids,
-  #     module.management_resources.resource_id,
-  #     module.management_resources.user_assigned_identity_ids,
-  #   ]
-  # }
+  management_groups_dependencies = [
+    module.management_resources.data_collection_rule_ids,
+    module.management_resources.resource_id,
+    module.management_resources.user_assigned_identity_ids,
+  ]
 
   policy_assignments_to_modify = {
     "slz" = {

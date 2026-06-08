@@ -80,10 +80,6 @@ provider "alz" {
   library_references = [
     {
       custom_url = "${path.root}/lib"
-    },
-    {
-      path = "platform/slz"
-      ref  = "2026.04.3"
     }
   ]
 }

@@ -93,12 +93,138 @@ module "management_groups" {
         "Enable-DDoS-VNET" = {
           "enforcement_mode" = "DoNotEnforce"
         }
+        "Enforce-Sov-L2-TLS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-HTTPS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKP" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKM" = {
+          "identity" = "SystemAssigned"
+        }
       }
     }
     "corp" = {
       "policy_assignments" = {
         "Deploy-Private-DNS-Zones" = {
           "enforcement_mode" = "DoNotEnforce"
+        }
+        "Enforce-Sov-L2-TLS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-HTTPS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKP" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKM" = {
+          "identity" = "SystemAssigned"
+        }
+      }
+    }
+    "online" = {
+      "policy_assignments" = {
+        "Enforce-Sov-L2-TLS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-HTTPS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKP" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKM" = {
+          "identity" = "SystemAssigned"
+        }
+      }
+    }
+    "identity" = {
+      "policy_assignments" = {
+        "Enforce-Sov-L2-TLS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-HTTPS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKP" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKM" = {
+          "identity" = "SystemAssigned"
+        }
+      }
+    }
+    "management" = {
+      "policy_assignments" = {
+        "Enforce-Sov-L2-TLS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-HTTPS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKP" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKM" = {
+          "identity" = "SystemAssigned"
+        }
+      }
+    }
+    "security" = {
+      "policy_assignments" = {
+        "Enforce-Sov-L2-TLS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-HTTPS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKP" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKM" = {
+          "identity" = "SystemAssigned"
+        }
+      }
+    }
+    "confidential_corp" = {
+      "policy_assignments" = {
+        "Enforce-Sov-L2-TLS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-HTTPS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKP" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKM" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L3-Conf" = {
+          "identity" = "SystemAssigned"
+        }
+      }
+    }
+    "confidential_online" = {
+      "policy_assignments" = {
+        "Enforce-Sov-L2-TLS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-HTTPS" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKP" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L2-CMKM" = {
+          "identity" = "SystemAssigned"
+        }
+        "Enforce-Sov-L3-Conf" = {
+          "identity" = "SystemAssigned"
         }
       }
     }
